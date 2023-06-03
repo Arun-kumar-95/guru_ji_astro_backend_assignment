@@ -7,6 +7,9 @@ Todo app simplifies our daily todo task and makes our life more easier and happi
 
 - API DOCUMENTATION : https://documenter.getpostman.com/view/20456948/2s93sW8b8m
 
+- SCREENSHOT : added while changing the password , link is send to the email 
+- SCREEN SHOT dded when we received the todo remainder on email
+
 ## Features:
 
 - Here you can create as-many-as todos you want to 
