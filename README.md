@@ -1,6 +1,7 @@
 ## REST_Full Todo API
 
 Todo app simplifies our daily todo task and makes our life more easier and happier.
+- NOTE: IMPORT THE JSON FILES OF THE WORKING API ON POSTMAN TO SEE IT CLEARLY
 
 - Read Doc: https://arun-kumar-95.github.io/guru_ji_astro_backend_assignment/
 
