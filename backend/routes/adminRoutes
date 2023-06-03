@@ -1,0 +1,13 @@
+const express = require("express");
+const router = express.Router();
+
+const {
+    getDshboardInfo
+} = require("../controllers/userController");
+
+const { isAuthenticated } = require("../utils/auth");
+const { AuthorizedRole } = require("../utils/authRoles");
+
+router.route("/dashboard").get(isAuthenticated , AuthorizedRole("Admin") , getDshboardInfo);
+
+module.exports = router;

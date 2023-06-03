@@ -1,0 +1,584 @@
+{
+	"info": {
+		"_postman_id": "1d4874b7-3612-4fb1-b085-890f8e9fc6b6",
+		"name": "GURU_JI_ASTRO_TODO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20456948"
+	},
+	"item": [
+		{
+			"name": "USER",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n     \"name\": \"Bipin kumar\",\r\n     \"email\":\"bipin@gmail.com\",\r\n     \"password\":\"123456\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/app/v1/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"app",
+								"v1",
+								"register"
+							]
+						},
+						"description": "When the user registered for the first time then he will be assigned the role of admin.\n\nAgain registering the user will assign the role of the user and only the admin can visit the admin routes where he can see the dashboard"
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"er.arun.rhino@gmail.com\",\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/app/v1/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"app",
+								"v1",
+								"login"
+							]
+						},
+						"description": "Add This to config , To access token use withCredentials: true\n\nconst config = {  \nheaders: { \"Content-Type\": \"application/json\" },  \nwithCredentials: true,  \n};"
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/app/v1/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"app",
+								"v1",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/app/v1/me",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"app",
+								"v1",
+								"me"
+							]
+						},
+						"description": "To access the token also add withCredentials: true inside config\n\nExample:\n\nconst config = {  \nwithCredentials: true,  \n};"
+					},
+					"response": []
+				},
+				{
+					"name": "Update user details",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Arun kumar\",\r\n     \"email\": \"er.arun.rhino@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/app/v1/profile/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"app",
+								"v1",
+								"profile",
+								"update"
+							]
+						},
+						"description": "Add This to config\n\nTo access token use: withCredentials: true\n\nFor sending json data: \"Content-Type\": \"application/json\"\n\nconst config = {  \nheaders: { \"Content-Type\": \"application/json\" },  \nwithCredentials: true,  \n};"
+					},
+					"response": []
+				},
+				{
+					"name": "forgot password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"er.arun.rhino@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/app/v1/forgot-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"app",
+								"v1",
+								"forgot-password"
+							]
+						},
+						"description": "Add This to config\n\nFor sending json data:\n\nconst config = { headers: { \"Content-Type\": \"application/json\" } };"
+					},
+					"response": []
+				},
+				{
+					"name": "Reset password",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"bokaro213\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/app/v1/reset-password/19858c85edd5f91515c396884c933808dee0e8c0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"app",
+								"v1",
+								"reset-password",
+								"19858c85edd5f91515c396884c933808dee0e8c0"
+							]
+						},
+						"description": "Body parameters are password\n\nAdd This to config\n\nFor sending json data:\n\nconst config = { headers: { \"Content-Type\": \"application/json\" } };"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TODO",
+			"item": [
+				{
+					"name": "new todo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"todo\": \"Coding Practice\",\r\n    \"description\":\"keep practicing the code to get master\",\r\n     \"category\":\"Personal\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/app/v1/todo/new-todo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"app",
+								"v1",
+								"todo",
+								"new-todo"
+							]
+						},
+						"description": "This is an authenticated route and only the login user will be able to perform the operation.\n\nAdd this to the config\n\nconst config = {  \nheaders: { \"Content-Type\": \"application/json\" },  \nwithCredentials: true,  \n};"
+					},
+					"response": []
+				},
+				{
+					"name": "delete todo",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/app/v1/todo/remove-todo/647a01375af20e85f9cdb7a6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"app",
+								"v1",
+								"todo",
+								"remove-todo",
+								"647a01375af20e85f9cdb7a6"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						},
+						"description": "This is an authenticated route and only the login user will be able to perform the delete operation.\n\nAdd This to config\n\nconst config = {  \nwithCredentials: true,  \n};\n\nHere the params is the id of the todo item"
+					},
+					"response": []
+				},
+				{
+					"name": "update todo",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"todo\": \"Send videos to wife\",\r\n    \"description\":\"Sending videos to wife make her feel good and happy\",\r\n     \"category\":\"Personal\",\r\n     \"status\": \"complete\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/app/v1/todo/update-todo/647a03734e80c7ec382d0f0e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"app",
+								"v1",
+								"todo",
+								"update-todo",
+								"647a03734e80c7ec382d0f0e"
+							]
+						},
+						"description": "This is an authenticated route and only the login user will be able to perform the update operation.\n\nAdd This to config\n\nconst config = {  \nheaders: { \"Content-Type\": \"application/json\" },  \nwithCredentials: true,  \n};\n\nHere the params is the id of the todo item"
+					},
+					"response": []
+				},
+				{
+					"name": "Search todos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/app/v1/todo/search?search=practice&page=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"app",
+								"v1",
+								"todo",
+								"search"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "practice"
+								},
+								{
+									"key": "page",
+									"value": "2"
+								}
+							]
+						},
+						"description": "This is an authenticated route and only the login user will be able to see this route\n\nAdd This to config\n\nTo access token use: withCredentials: true\n\nconst config = {  \nwithCredentials: true,  \n};"
+					},
+					"response": []
+				},
+				{
+					"name": "Remainder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"time\":\"0.2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/app/v1/todo//reminder/647a030cfcc21d69d15a224f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"app",
+								"v1",
+								"todo",
+								"",
+								"reminder",
+								"647a030cfcc21d69d15a224f"
+							]
+						},
+						"description": "This is an authenticated route and only the login user will be able to see\n\nAdd config\n\nTo access token use: withCredentials: true\n\nFor sending json data: \"Content-Type\": \"application/json\"\n\nconst config = {  \nheaders: { \"Content-Type\": \"application/json\" },  \nwithCredentials: true,  \n};\n\nHere the params is the id of the todo item\n\nInside the body we pass the remainder time after how many miniute will notify via the email."
+					},
+					"response": []
+				},
+				{
+					"name": "Edit todo description",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"This todo description is rechanged\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/app/v1/todo//edit-description/647b12a902614cc9d06019ef",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"app",
+								"v1",
+								"todo",
+								"",
+								"edit-description",
+								"647b12a902614cc9d06019ef"
+							]
+						},
+						"description": "This is an authenticated route and only the login user will be able to see this route\n\nThis route will helpypu to edit the description of the todo item\n\nAdd this to config while sending the request\n\nAdd This to config\n\nTo access token use: withCredentials: true\n\nFor sending json data: \"Content-Type\": \"application/json\"\n\nconst config = {  \nheaders: { \"Content-Type\": \"application/json\" },  \nwithCredentials: true,  \n};"
+					},
+					"response": []
+				},
+				{
+					"name": "Edit todo title",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Title changed\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/app/v1/todo/edit-title/647b12a902614cc9d06019ef",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"app",
+								"v1",
+								"todo",
+								"edit-title",
+								"647b12a902614cc9d06019ef"
+							]
+						},
+						"description": "This is an authenticated route and only the login user will be able to see the route.\n\nthis route will help the user to edit the todo title.\n\nAdd This to config while making the request.\n\nTo access token use: withCredentials: true\n\nFor sending json data: \"Content-Type\": \"application/json\"\n\nconst config = {  \nheaders: { \"Content-Type\": \"application/json\" },  \nwithCredentials: true,  \n};"
+					},
+					"response": []
+				},
+				{
+					"name": "Change todo status",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\":\"InProgress\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/app/v1/todo/update-status/647b12a902614cc9d06019ef",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"app",
+								"v1",
+								"todo",
+								"update-status",
+								"647b12a902614cc9d06019ef"
+							]
+						},
+						"description": "This is an authenticated route and only the login user will be able to perform the update operation of the todo title,\n\nThis route will help the user to change the title.\n\nAdd this to the config , while making the request\n\nTo access token use: withCredentials: true\n\nFor sending json data: \"Content-Type\": \"application/json\"\n\nconst config = {  \nheaders: { \"Content-Type\": \"application/json\" },  \nwithCredentials: true,  \n};\n\nSTATUS VALUE CAN BE :\n\nThe default one is the Pending\n\nStartFragment\n\n1. Pending\n2. Complete\n3. InProgress\n    \n\nEndFragment"
+					},
+					"response": []
+				},
+				{
+					"name": "Get all todos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/app/v1/todo/all-todos?category=Important&page=1&status=Pending",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"app",
+								"v1",
+								"todo",
+								"all-todos"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "Important"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "status",
+									"value": "Pending"
+								}
+							]
+						},
+						"description": "This is an authenticated route and only the login user will be able to get this route.\n\nwhen the logged user visit then he will able to see all the todos . here you can perform the pagination feature by changing the page number\n\nNote: The result per page is 8\n\nAdd This to config\n\nTo access token use: withCredentials: true\n\nconst config = {  \nwithCredentials: true,  \n};\n\nFILTER CRITERIA ARE\n\n1. CATEGORY\\[\"Busisness\", \"Personal\", \"Important\", \"Other\"\\]\n2. PAGE : Result per page is 8 , Changin the page will show the todos.\n3. STATUS\n    \\[\"Pending\", \"Complete\", \"InProgress\"\\]\n    Makig the combination of these will perform filteration"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Get dashboard info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/app/v1/admin/dashboard",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"app",
+								"v1",
+								"admin",
+								"dashboard"
+							]
+						},
+						"description": "This is an authorization and authenticated route and only the admin user will be able to visit this route\n\nTher the admin can see the total user listed till now\n\nAdd This to config\n\nTo access token use: withCredentials: true\n\nconst config = {  \nwithCredentials: true,  \n};"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
